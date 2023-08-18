@@ -1,0 +1,6 @@
+@mixin min-window-width($width) {
+  @media screen and (min-width: $width) { @content; }
+}
+@mixin bg-cover($image){
+  background: url($image) center/cover no-repeat;
+}
