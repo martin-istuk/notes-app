@@ -20,7 +20,7 @@ export class NotesService {
 			isPinned: true,
 			title: "Another note",
 			content: "Sadly, only second note.",
-			tags: ["this is a tag"],
+			tags: ["this is a tag", "this is also a tag"],
 		},
 		{
 			id: "bnbnbnb",

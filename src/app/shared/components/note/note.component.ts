@@ -25,8 +25,8 @@ import { NotesService, Note } from "src/app/notes.service";
 				<mat-card-subtitle>(ID {{ note.id }})</mat-card-subtitle>
 			</mat-card-header>
 			<mat-card-actions align="end">
-				<button mat-icon-button color="primary">
-					<mat-icon>push_pin</mat-icon>
+				<button mat-icon-button>
+					<mat-icon [ngClass]="{ pinned: note.isPinned }">push_pin</mat-icon>
 				</button>
 				<button mat-icon-button color="warn">
 					<mat-icon>delete_forever</mat-icon>
@@ -44,19 +44,24 @@ import { NotesService, Note } from "src/app/notes.service";
 	`,
 	styles: [
 		`
-			h1 {
-				font-family: "Oxygen";
-			}
 			mat-card {
 				display: grid;
 				grid-template-areas: "titles pin-btn" "note note";
+				gap: 16px;
 				justify-content: space-between;
 			}
 			mat-card-header {
 				grid-area: titles;
+				mat-card-title {
+					font-family: "Oxygen";
+				}
 			}
 			mat-card-actions {
 				grid-area: pin-btn;
+				mat-icon.pinned {
+					transform: rotate(45deg);
+					color: #3f51b5;
+				}
 			}
 			mat-card-content {
 				grid-area: note;

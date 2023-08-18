@@ -10,6 +10,7 @@ export class TagsService {
 		"Blueee",
 		"always first",
 		"this is a tag",
+		"this is also a tag",
 		"tag not pinned",
 	];
 

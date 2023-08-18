@@ -20,6 +20,10 @@ import { NoteComponent } from "../shared/components/note/note.component";
 		`
 			@import "../shared/styles/mixins.scss";
 
+			h1 {
+				font-family: "Oxygen";
+			}
+
 			.container-all-notes {
 				display: grid;
 				gap: 20px;
