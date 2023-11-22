@@ -12,7 +12,7 @@ export class NotesService {
 			isPinned: true,
 			title: "A Note",
 			content:
-				"I am THE FIRST note! First first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first first!",
+				"I am THE FIRST note! First first first first first first first first first first first first first first first first first first!",
 			tags: ["always first"],
 		},
 		{

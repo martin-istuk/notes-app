@@ -19,7 +19,8 @@ import { Note, NotesService } from "../../../notes.service";
 		TagChipsComponent,
 	],
 	template: `
-		<mat-card *ngIf="note; else noteNotFound">
+		@if (note) {
+		<mat-card>
 			<mat-card-header>
 				<mat-card-title>{{ note.title }}</mat-card-title>
 				<mat-card-subtitle>(ID {{ note.id }})</mat-card-subtitle>
@@ -37,10 +38,10 @@ import { Note, NotesService } from "../../../notes.service";
 				<app-tag-chips [tags]="note.tags" />
 			</mat-card-content>
 		</mat-card>
-		<ng-template #noteNotFound>
-			<h3>Error</h3>
-			<p>Note not found</p>
-		</ng-template>
+		} @else {
+		<h3>Error</h3>
+		<p>Note not found</p>
+		}
 	`,
 	styles: [
 		`
