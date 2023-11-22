@@ -6,7 +6,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 
 import { TagChipsComponent } from "../tag-chips/tag-chips.component";
-import { NotesService, Note } from "src/app/notes.service";
+import { Note, NotesService } from "../../../notes.service";
 
 @Component({
 	selector: "app-note",
