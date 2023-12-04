@@ -1,4 +1,4 @@
-@mixin min-window-width($width) {
+@mixin min-width($width) {
   @media screen and (min-width: $width) { @content; }
 }
 @mixin bg-cover($image){

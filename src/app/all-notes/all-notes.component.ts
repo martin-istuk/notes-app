@@ -28,7 +28,7 @@ import { NoteComponent } from "../shared/components/note/note.component";
 				display: grid;
 				gap: 20px;
 				margin: 20px;
-				@include min-window-width(500px) {
+				@include min-width(500px) {
 					grid-template-columns: repeat(3, 1fr);
 				}
 			}
